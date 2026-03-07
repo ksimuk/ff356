@@ -4,7 +4,7 @@ RUN apk add --no-cache wget
 RUN wget https://ftp.mozilla.org/pub/firefox/releases/3.5.6/linux-i686/en-US/firefox-3.5.6.tar.bz2 -O /tmp/firefox.tar.bz2
 
 # STAGE 2: Legacy 64-bit environment with 32-bit compatibility
-FROM ubuntu:10.04
+FROM ghcr.io/ksimuk/ubuntu:10.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV G_SLICE=always-malloc
